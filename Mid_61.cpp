@@ -13,38 +13,32 @@ int main()
 	cout << "Please Enter your last-name : ";
 	cin >> sername ;
 	cout << "\n++++++++++++++++++++++++++++++ " << endl;
-
 	do
 	{
 		cout << "Enter Birth-Day(1-31) : ";
 		cin >> day ;
 	}while(day < 1 || day >31);
-
 	do
 	{
 		cout << "Enter Birth-Month(1-12) : ";
 		cin >> month ;
 	}while(month < 1 || month > 12);
-
 	do
 	{
 		cout << "Enter Birth-Year(1950-2019) : ";
 		cin >> year ;
 	}while(year < 1950 || year > 2019);
-
 	do
 	{
 		cout << "\n++++++++++++++++++++++++++++++" << endl;
 		cout << "Please Enter your Gender ( f = Female , m = male ) : ";
 		cin >> Gender ;
 	}while(Gender != "f" && Gender != "F" && Gender != "m" && Gender != "M");
-	
 	if(Gender == "f" || Gender == "F") Gender = "Ms. " ;
 	else if (Gender == "m" || Gender == "M" ) Gender = "Mr. ";
-
+	
 	cout << "\n++++++++++++++++++++++++++++++" << endl;
 	cout << "Hello " << Gender << name << " " << sername << endl << endl;
-
 	switch (month)
 	{
 	case 1 : cout << "Your birth day is " << day << " jan " << year << endl ;
@@ -74,9 +68,7 @@ int main()
 	default : cout << "Error.\n" ;
 	}
 	cout << "Your age is " << 2019 - year << " Year old."<< endl << endl ;
-
 	cout << "++++++++++++++++++++++++++++++" << endl;
-
 	srand(time(NULL));
 	r = 1+rand()%9;
 	if (r == 1) colortext = "Red ";
@@ -88,10 +80,8 @@ int main()
 	else if (r == 7) colortext = "Brown ";
 	else if (r == 8) colortext = "Silver ";
 	else if (r == 9) colortext = "Black ";
-
 	cout << r << endl;
 	cout << "Your luckey color is : " << setfill('*') << setw(r+1) << " " << colortext << endl << endl ;
-
-
+	
 	return(0);
 }
